@@ -1,0 +1,23 @@
+.m-header {
+  max-width: var(--layoutWidth);
+  margin: 0 auto;
+  padding: 5rem 0;
+  color: var(--headerColor);
+  text-align: center;
+  
+  transition: color 0.5s ease-in-out;
+  
+  @media (max-width: 600px) {
+    padding: 3.5rem 0;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    font-size: 1rem;
+  }
+}

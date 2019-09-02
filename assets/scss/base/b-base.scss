@@ -1,0 +1,75 @@
+html {
+  font-size: 1em;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --layoutWidth: 560px;
+  
+  --primaryColor: #{$primaryColor};
+  --primaryColorLighten: #{$primaryColorLighten};
+  --primaryColorLightest: #{$primaryColorLightest};
+  
+  [data-theme="light"] {
+    // --bgColor: #{$gradientLight};
+    --bgColor: #{$uniqueGradient};
+    --bgPosition: 0 0vh;
+    
+    --textColor: #444;
+    --headerColor: var(--primaryColor);
+    --navBarBg: linear-gradient(170deg, var(--primaryColorLighten), transparent);
+    --navBarBgMobile: linear-gradient(-35deg, var(--primaryColor), var(--primaryColorLighten));
+    --searchBg: #FFF;
+    
+    --buttonBackgroundColor: #FFF;
+    --buttonBackgroundHoverColor: #{$primaryColor};
+    --buttonColor: #{$primaryColor};
+    --buttonHoverColor: #FFF;
+    
+    --postBg: #FFF;
+    --postTimeColor: #999;
+    --postTitleColor: #333;
+    --postTextColor: #666;
+    --postMediaBorderColor: var(--primaryColor);
+    
+    // --postBg: var(--primaryColor);
+    // --postTimeColor: var(--primaryColorLightest);
+    // --postTitleColor: #FFF;
+    // --postTextColor: #FFF;
+    // --postMediaBorderColor: var(--primaryColorLightest);
+  }
+  
+  [data-theme="dark"] {
+    // --bgColor: #{$gradientDark};
+    --bgColor: #{$uniqueGradient};
+    --bgPosition: 0 -120vh;
+    
+    --textColor: #FFF;
+    --headerColor: #FFF;
+    --navBarBg: linear-gradient(170deg, var(--primaryColorLightest), transparent);
+    --navBarBgMobile: linear-gradient(-35deg, var(--primaryColorLightest), var(--primaryColorLighten));
+    --searchBg: var(--primaryColorLightest);
+    
+    --buttonBackgroundColor: var(--primaryColor);
+    --buttonBackgroundHoverColor: #FFF;
+    --buttonColor: #FFF;
+    --buttonHoverColor: var(--primaryColor);
+    
+    --postBg: var(--primaryColor);
+    --postTimeColor: var(--primaryColorLightest);
+    --postTitleColor: #FFF;
+    --postTextColor: #FFF;
+    --postMediaBorderColor: var(--primaryColorLightest);
+  }
+}
+
+body {
+  background: var(--bgColor);
+  background-size: 100vw 220vh;
+  background-position: var(--bgPosition);
+  background-attachment: fixed;
+  color: var(--textColor);
+  font-family: $primaryFont;
+  
+  transition: background 1s cubic-bezier(.65,0,.35,1);
+}

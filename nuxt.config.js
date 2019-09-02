@@ -13,7 +13,10 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
+    ],
+    bodyAttrs: {
+      "data-theme": "dark"
+    }
   },
   /*
   ** Customize the progress-bar color
@@ -23,11 +26,13 @@ module.exports = {
   ** Global CSS
   */
   css: [
+    '@/assets/scss/main.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+    '~/plugins/firebase.js'
   ],
   /*
   ** Nuxt.js dev-modules
@@ -50,6 +55,17 @@ module.exports = {
     ** You can extend webpack config here
     */
     extend (config, ctx) {
+      if (ctx.isDev && ctx.isClient) {
+        config.module.rules.push({
+          enforce: "pre",
+          test: /\.(js|vue)$/,
+          loader: "eslint-loader",
+          exclude: /(node_modules)/,
+          options : {
+            fix : true
+          }
+        })
+      }
     }
   }
 }

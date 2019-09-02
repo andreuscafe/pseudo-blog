@@ -1,0 +1,101 @@
+.m-navBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 56px;
+  padding: 10px 20px;
+  background: var(--navBarBg);
+  z-index: 10;
+  // box-shadow: 0 15px 15px -10px rgba(0, 0, 0, 0.1);
+
+  @media (max-width: 600px) {
+    top: unset;
+    bottom: 0;
+    position: fixed;
+    width: 100vw;
+
+    background: var(--navBarBgMobile);
+  }
+
+  .navWrapper {
+    flex: 1 1 100%;
+    max-width: var(--layoutWidth);
+    display: flex;
+
+    @media (max-width: 600px) {
+      justify-content: flex-end;
+    }
+
+    .searchBar {
+      margin-left: auto;
+      position: relative;
+
+      .searchInput {
+        display: inline-flex;
+        border: 0;
+        border-radius: 100px;
+        // padding: 0 45px 0 10px;
+        padding: 0 10px;
+        line-height: 0;
+        height: 35px;
+        box-sizing: border-box;
+        font-family: $primaryFont;
+        font-size: 1rem;
+        width: auto;
+        max-width: 160px;
+
+        background-color: var(--searchBg);
+
+        transition: background-color 0.5s ease-in-out;
+      }
+
+      .navButton {
+        position: absolute;
+        top: 2.5px;
+        right: 2.5px;
+        border-radius: 100px;
+        font-size: 0.8rem;
+        min-height: 30px;
+        width: 30px;
+
+        display: none;
+      }
+    }
+  }
+
+  .navButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 35px;
+    padding: 0 10px;
+    border-radius: 100px;
+    background-color: var(--buttonBackgroundColor);
+    color: var(--buttonColor);
+    cursor: pointer;
+    text-decoration: none;
+
+    transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+
+    &:hover {
+      background-color: var(--buttonBackgroundHoverColor);
+      color: var(--buttonHoverColor);
+    }
+
+    &.alignRight {
+      margin-left: auto;
+
+      @media (max-width: 600px) {
+        margin-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+// Variables
+$primaryFont: 'Ubuntu', sans-serif;
+$primaryColor: #3f3233;
+$primaryColorLighten: lighten($primaryColor, 20);
+$primaryColorLightest: lighten($primaryColor, 45);
+
+$gradientLight: linear-gradient(-45deg, $primaryColorLightest, #fff);
+
+$gradientDark: linear-gradient(-45deg, $primaryColorLighten, $primaryColor);
+
+// $uniqueGradient: linear-gradient(5deg, #f3e9ea 0%, $primaryColorLightest 49.9%, $primaryColorLighten 50%, $primaryColor 100%);
+
+$uniqueGradient: linear-gradient(185deg, #f3e9ea 0%, $primaryColorLightest 49.9%, $primaryColorLighten 50%, $primaryColor 100%);
