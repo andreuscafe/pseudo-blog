@@ -1,6 +1,6 @@
-# pseudo-blog
+# The Pseudo-blog
 
-> @AndreusCafe&#39;s pseudo-blog
+> @AndreusCafe&#39;s Pseudo-blog
 
 ## Build Setup
 
