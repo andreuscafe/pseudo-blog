@@ -19,7 +19,7 @@
     "express": "^4.16.4",
     "firebase": "^6.5.0",
     "luxon": "^1.17.2",
-    "nuxt": "^2.0.0"
+    "nuxt": "^3.4.3"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.0.1",
